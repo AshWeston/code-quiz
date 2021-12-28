@@ -1,0 +1,90 @@
+*{
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro","Calibre",sans-serif;
+
+}
+
+:root {
+--main: rgb(32, 57, 156);
+--white: white;
+--greywhite: #909096;
+--greyblack: #26292B;
+}
+
+body {
+    background: var(--main);
+
+}
+
+
+/* Info Box Styling */
+.info_box {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 540px;
+    background: var(--white);
+    border-radius: 5px;
+}
+
+.info_box .info_title {
+    height: 60px;
+    width:100%;
+    border-bottom: 1px solid lightgrey;
+    display:flex;
+    align-items: center;
+    padding: 0 35px ;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info_box .info_title {
+    display: flex;
+    justify-content: center;
+    color: var(--main);
+}
+
+.info_box .instructions {
+    padding: 15px 35px; 
+}
+
+.info_box .instructions .intro {
+    margin: 5px 0;
+    font-size: 17px;
+    align-items: center;
+  
+}
+
+.info_box .instructions .intro span {
+    font-weight: 600;
+    color: var(--main);
+}
+
+.info_box .start_button {
+    height: 60px;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightgray;
+}
+
+.info_box .start_button button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid var(--main);
+    border-radius: 5px;
+    color: var(--main);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color:var(--white)
+}
+
+.start_button button:hover {
+    color:var(--white);
+    background-color: var(--main);
+
+}
