@@ -88,3 +88,12 @@ body {
     background-color: var(--main);
 
 }
+
+.visible {
+    display: block;
+
+}
+
+.invisible {
+    display: none;
+}

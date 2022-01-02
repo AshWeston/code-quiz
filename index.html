@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Info Box -->
-    <div class="info_box">
+    <div class="info_box" id = "start-screen">
         <div class="info_title">
             <span> Coding Quiz Challenge</span>
             </div>
@@ -18,23 +18,24 @@
             <div class ="intro">Keep in mind that incorrect answers will penalise your score/time by <span>ten seconds!</span></div> 
         </div>
         <div class="start_button">
-        <button>Start Quiz</button>
+        <button id = "begin-start">Start Quiz</button>
         </div>
+    </div>
+<!-- Timer Element -->
+    <div id = "timer" class="timer">
+        <div class="time_text"> Time Left</div>
+        <div class="timer_sec">0</div>
     </div>
 
     <!-- Quiz Box -->
-    <div class="quiz_box">
-        <header>
-            <div class="timer">
-                <div class="time_text"> Time Left</div>
-                <div class="timer_sec">15</div>
-            </div>
-        </header>
+    <div id="questions" class="invisible quiz_box">
+      <h3 id="title"></h3>
+      <div class="options" id="options" ></div>
     </div>
 
    
 
   
-    
+<script src="script.js"></script>
 </body>
 </html>
