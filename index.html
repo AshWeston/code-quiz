@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
     <title>Code Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Info Box -->
-    <div class="info_box" id = "start-screen">
-        <div class="info_title">
-            <span> Coding Quiz Challenge</span>
-            </div>
-        <div class ="instructions">
-            <div class ="intro">Try to answer the following code-related questions within the time limit. </div>
-            <div class ="intro">Keep in mind that incorrect answers will penalise your score/time by <span>ten seconds!</span></div> 
+    <div class="info_box" id="start-screen">
+      <div class="info_title">
+        <span> Coding Quiz Challenge</span>
+      </div>
+      <div class="instructions">
+        <div class="intro">
+          Try to answer the following code-related questions within the time
+          limit.
         </div>
-        <div class="start_button">
-        <button id = "begin-start">Start Quiz</button>
+        <div class="intro">
+          Keep in mind that incorrect answers will penalise your score/time by
+          <span>ten seconds!</span>
         </div>
+      </div>
+      <div class="start_button">
+        <button id="begin-start">Start Quiz</button>
+      </div>
     </div>
-<!-- Timer Element -->
-    <div id = "timer" class="timer">
-        <div class="time_text"> Time Left</div>
-        <div class="timer_sec">0</div>
+    <!-- Timer Element -->
+    <div id="timer" class="timer">
+      <div class="time_text">Time Left</div>
+      <div class="timer_sec">0</div>
     </div>
 
     <!-- Quiz Box -->
     <div id="questions" class="invisible quiz_box">
-        <h3 id = "title"></h3>
-        <div id = "options"></div>
-        <div id = "answer">Answer</div>
+      <h3 id="title"></h3>
+      <div id="options"></div>
+      <div id="answer">Answer</div>
     </div>
 
-    <!--  -->
-   
+    <!-- HighScores -->
+    <div id="highscores"></div>
 
-  
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

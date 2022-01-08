@@ -95,18 +95,17 @@ function showQuestions() {
 
 function checkAnswer() {
   var userAnswer = this.textContent;
-  console.log(userAnswer);
   if (userAnswer === questions[questionIndex].solution) {
-    console.log("correct answer");
-    document.querySelector(".answer").textContent = "Correct Answer!";
+    document.querySelector("#answer").textContent = "Correct Answer!";
   } else if (userAnswer != questions[questionIndex].solution) {
-    console.log("wrong answer");
-    document.querySelector(".answer").textContent = "Wrong Answer!";
+    document.querySelector(
+      "#answer"
+    ).textContent = `Wrong Answer! The correct answer is ${questions[questionIndex].solution}`;
   }
 
-  //   if (time <= 0) {
-  //     endQuiz();
-  //   }
+  if (time <= 0) {
+    endQuiz();
+  }
   // check user's answer
   //if it is wrong subtract time by 10
   // if time is 0 call endQuiz
