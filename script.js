@@ -46,16 +46,19 @@ var quizBoxEl = document.getElementById("questions");
 var questionIndex = 0;
 var titleEl = document.getElementById("title");
 var optionsEl = document.getElementById("options");
-var highscoresEL = document.getElementById("highscores");
+var scorePageEl = document.querySelector("#score");
+var scoreAreaEl = document.querySelector("#scoreArea");
 var submitBtn = document.getElementById("submit-button");
-var viewHighScores = document.getElementById("viewhighscores");
+var initials = document.querySelector("#initials");
+// var viewHighScores = document.getElementById("viewhighscores");
+var highScoreEl = document.querySelector("#highScores");
 
 // event listener in our start quiz button to start quiz//
 //when event listener runs we want to startQuiz function??
 function startQuiz() {
   //hide infobox///
   startScreenEl.setAttribute("class", "invisible");
-  viewHighScores.setAttribute("class", "invisible");
+  // viewHighScores.setAttribute("class", "invisible");
   //show first question//
   //start timer//
   timerId = setInterval(tick, 1000);
@@ -122,10 +125,11 @@ function checkAnswer() {
 
 function endQuiz() {
   clearInterval(timerId);
-  quizBoxEl.setAttribute("class", "invisible");
+  displayScore();
+  // quizBoxEl.setAttribute("class", "invisible");
   //hide the question el
   //show the highscore submission el
-  highscoresEL.setAttribute("class", "visible");
+  // scorePageEl.setAttribute("class", "visible");
   // submitBtn.addEventListener ("click", showScores)
 
   // submitBtn.addEventListener("click", viewHighScores);
@@ -134,4 +138,20 @@ function endQuiz() {
 // function showSolution ()//shows correct answer
 
 ///
-function showScores() {}
+
+function displayScore() {
+  timerEl.textContent = "You are all done!";
+  quizBoxEl.replaceWith(scorePageEl);
+  scorePageEl.setAttribute("class", "visible");
+  scoreAreaEl.innerText = "Final Score:" + time;
+  // Create an input element for initials
+  initTextEl = document.createElement("input");
+  initTextEl.setAttribute("id", "initials-input");
+  initTextEl.setAttribute("type", "text");
+  initTextEl.setAttribute("name", "initials");
+  initTextEl.setAttribute("placeholder", "Enter Initials here");
+}
+
+// initials.appendChild(initTextEl);
+
+//create submit botton element
