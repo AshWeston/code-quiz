@@ -97,3 +97,8 @@ body {
 .invisible {
     display: none;
 }
+
+/* timer element styling */
+.timer {
+    color: white;
+}
