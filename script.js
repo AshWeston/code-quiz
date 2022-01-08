@@ -41,10 +41,12 @@ var startScreenEl = document.getElementById("start-screen");
 var timerEl = document.getElementById("timer");
 var time = 60;
 var timerId;
+var answerEl = document.getElementById("answer");
 var quizBoxEl = document.getElementById("questions");
 var questionIndex = 0;
 var titleEl = document.getElementById("title");
 var optionsEl = document.getElementById("options");
+var score = 60;
 
 // event listener in our start quiz button to start quiz//
 //when event listener runs we want to startQuiz function??
@@ -92,9 +94,19 @@ function showQuestions() {
 }
 
 function checkAnswer() {
-  if (time <= 0) {
-    endQuiz();
+  var userAnswer = this.textContent;
+  console.log(userAnswer);
+  if (userAnswer === questions[questionIndex].solution) {
+    console.log("correct answer");
+    document.querySelector(".answer").textContent = "Correct Answer!";
+  } else if (userAnswer != questions[questionIndex].solution) {
+    console.log("wrong answer");
+    document.querySelector(".answer").textContent = "Wrong Answer!";
   }
+
+  //   if (time <= 0) {
+  //     endQuiz();
+  //   }
   // check user's answer
   //if it is wrong subtract time by 10
   // if time is 0 call endQuiz
