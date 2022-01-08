@@ -47,12 +47,15 @@ var questionIndex = 0;
 var titleEl = document.getElementById("title");
 var optionsEl = document.getElementById("options");
 var highscoresEL = document.getElementById("highscores");
+var submitBtn = document.getElementById("submit-button");
+var viewHighScores = document.getElementById("viewhighscores");
 
 // event listener in our start quiz button to start quiz//
 //when event listener runs we want to startQuiz function??
 function startQuiz() {
   //hide infobox///
   startScreenEl.setAttribute("class", "invisible");
+  viewHighScores.setAttribute("class", "invisible");
   //show first question//
   //start timer//
   timerId = setInterval(tick, 1000);
@@ -103,25 +106,32 @@ function checkAnswer() {
     document.querySelector("#answer").textContent =
       "Your previous answer was incorrect!";
   }
+  //if question Index is more than the length of the questions or the timer gets to 0, call endQuiz else Show Questions.
+  questionIndex++;
   if (time <= 0) {
     endQuiz();
   }
-  questionIndex++;
-  if (questionIndex > questions.length) {
-    console.log("hi");
+  if (questionIndex >= questions.length) {
     endQuiz();
   }
   //if question Index is more than the length of the questions
   //call endQuiz()
   //else
-  showQuestions();
+  else showQuestions();
 }
 
 function endQuiz() {
   clearInterval(timerId);
+  quizBoxEl.setAttribute("class", "invisible");
   //hide the question el
   //show the highscore submission el
   highscoresEL.setAttribute("class", "visible");
+  // submitBtn.addEventListener ("click", showScores)
+
+  // submitBtn.addEventListener("click", viewHighScores);
 }
 
 // function showSolution ()//shows correct answer
+
+///
+function showScores() {}
