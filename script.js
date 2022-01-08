@@ -46,7 +46,7 @@ var quizBoxEl = document.getElementById("questions");
 var questionIndex = 0;
 var titleEl = document.getElementById("title");
 var optionsEl = document.getElementById("options");
-var score = 60;
+var highscoresEL = document.getElementById("highscores");
 
 // event listener in our start quiz button to start quiz//
 //when event listener runs we want to startQuiz function??
@@ -56,13 +56,13 @@ function startQuiz() {
   //show first question//
   //start timer//
   timerId = setInterval(tick, 1000);
-  timerEl.textContent = time;
+  timerEl.textContent = `Time: ${time}`;
   showQuestions();
 }
 
 function tick() {
   time--;
-  timerEl.textContent = time;
+  timerEl.textContent = `Time: ${time}`;
   if (time <= 0) {
     endQuiz();
   }
@@ -96,22 +96,21 @@ function showQuestions() {
 function checkAnswer() {
   var userAnswer = this.textContent;
   if (userAnswer === questions[questionIndex].solution) {
-    document.querySelector("#answer").textContent = "Correct Answer!";
+    document.querySelector("#answer").textContent =
+      "Your previous answer was correct!";
   } else if (userAnswer != questions[questionIndex].solution) {
-    document.querySelector(
-      "#answer"
-    ).textContent = `Wrong Answer! The correct answer is ${questions[questionIndex].solution}`;
+    time = time - 10; //reduce time by 10 seconds for every incorrect answer
+    document.querySelector("#answer").textContent =
+      "Your previous answer was incorrect!";
   }
-
   if (time <= 0) {
     endQuiz();
   }
-  // check user's answer
-  //if it is wrong subtract time by 10
-  // if time is 0 call endQuiz
-
-  // change textcontent time
   questionIndex++;
+  if (questionIndex > questions.length) {
+    console.log("hi");
+    endQuiz();
+  }
   //if question Index is more than the length of the questions
   //call endQuiz()
   //else
@@ -121,7 +120,8 @@ function checkAnswer() {
 function endQuiz() {
   clearInterval(timerId);
   //hide the question el
-  //show the highscrore submission el
+  //show the highscore submission el
+  highscoresEL.setAttribute("class", "visible");
 }
 
 // function showSolution ()//shows correct answer
