@@ -1,0 +1,46 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid hsl(320, 4%, 86%);
+  border-radius: 0.75rem;
+  background-color: white;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgb(233, 47, 186);
+  transform: translateY (-0.1rem);
+  transition: transform 150 ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: var(--main);
+  color: white;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: rgb(99, 212, 99);
+}
+
+.incorrect {
+  background-color: rgb(214, 82, 82);
+}
+
+/* Heads Up Display */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-main-text {
+  text-align: center;
+}

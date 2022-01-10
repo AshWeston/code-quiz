@@ -4,64 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheet.css" />
-    <title>Code Quiz</title>
+    <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <!-- Info Box -->
-    <div class="info_box" id="start-screen">
-      <div class="info_title">
-        <span> Coding Quiz Challenge</span>
-      </div>
-      <div class="instructions">
-        <div class="intro">
-          Try to answer the following code-related questions within the time
-          limit.
+    <div class="container">
+      <div id="home" class="flex-center flex-column">
+        <h1>Coding Quiz Challenge</h1>
+        <div class = "intro">
+        <span class = "intro-text"> Try to answer the following code-related questions within the time limit.
+          Keep in mind that incorrect answers will penalise your score/time by <span class = "ten-seconds">ten seconds!</span></span>
         </div>
-        <div class="intro">
-          Keep in mind that incorrect answers will penalise your score/time by
-          <span>ten seconds!</span>
-        </div>
-      </div>
-      <div class="start_button">
-        <button id="begin-start">Start Quiz</button>
+        <a class="btn" href="game.html"> Play</a>
+        <a class="btn" href="highscores.html"> High Scores</a>
       </div>
     </div>
-    <!-- Timer Element -->
-    <div id="timer" class="timer">
-      <div class="time_text"></div>
-      <div class="timer_sec"></div>
-    </div>
-
-    <!-- View HighScores -->
-    <!-- <div id="viewhighscores">
-      <button>View High Scores</button>
-      <div class="time_text"></div>
-      <div class="timer_sec"></div>
-    </div> -->
-
-    <!-- Quiz Box -->
-    <div id="questions" class="invisible quiz_box">
-      <h3 id="title"></h3>
-      <div id="options"></div>
-      <div id="answer"></div>
-    </div>
-
-  
-    <!-- 888888888888888888888888888888888888888 -->
-    <!-- Final Score Display -->
-    <div id="score" class="score invisible">
-      <div class="finished"></div>
-      <div id="scoreArea" class="scoreArea"></div>
-      <span>Enter initials:</span>
-      <input id="initials"></input> 
-      <button class= "submit-button">Submit </button>
-      <div class="highscoresview">
-        <button class= "go-back-button">Go Back</button>
-        <button class= "clear-scores-button">Clear High Scores</button>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
   </body>
 </html>
