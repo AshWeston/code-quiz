@@ -18,5 +18,11 @@ saveHighScore = (e) => {
     name: initials.value,
   };
   highScores.push(score);
-  console.log(highScores);
+
+  highScores.sort((a, b) => b.score - a.score); //save highest to lowest score
+  highScores.splice(5); //only save up to 5 high scores.
+  localStorage.setItem("highScores", JSON.stringify(highScores)); //save as strin
+  window.location.assign("index.html");
 };
+
+///disabled button not working - check with BCS support
