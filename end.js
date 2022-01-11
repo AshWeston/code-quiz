@@ -6,10 +6,6 @@ const finalScore = document.getElementById("finalScore");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 finalScore.innerText = mostRecentScore;
 
-initials.addEventListener("keyup", () => {
-  saveScoreBtn.disabled = !initials.value;
-});
-
 saveHighScore = (e) => {
   e.preventDefault();
 
@@ -24,5 +20,3 @@ saveHighScore = (e) => {
   localStorage.setItem("highScores", JSON.stringify(highScores)); //save as strin
   window.location.assign("index.html");
 };
-
-///disabled button not working - check with BCS support
