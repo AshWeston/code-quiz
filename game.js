@@ -10,11 +10,8 @@ let score = 60; //also time
 let timerID;
 let questionCounter = 0;
 let availableQuestions = [];
-///added today
 
-// NOT RELEVANT TO HOMEWORK
-// var CORRECT_BONUS = 10;
-var MAX_QUESTIONS = 3;
+var MAX_QUESTIONS = 5;
 
 let questions = [
   {
@@ -82,6 +79,7 @@ startGame = () => {
 //Move to Next Question, using text from array//
 getNewQuestion = () => {
   if (availableQuestions.length === 0) {
+    localStorage.setItem("mostRecentScore", score);
     //if no questions left,
     //go to end page
     return window.location.assign("end.html");
