@@ -9,9 +9,16 @@ Try to answer the code-related questions within the time limit. Keep in mind tha
 Click "Play" to begin the Quiz. 
 ![image](https://user-images.githubusercontent.com/93314333/148902878-672fa5cd-459a-49cf-bcb7-f12d97623131.png)
 
+![image](https://user-images.githubusercontent.com/93314333/148902981-63578b1a-8062-4538-862c-b16b8a170bc7.png)
+
 Once you have completed the Quiz, enter your initials to save your High Score. These can be viewed on the High Scores page, from the Home Page. 
 
-![image](https://user-images.githubusercontent.com/93314333/148902981-63578b1a-8062-4538-862c-b16b8a170bc7.png)
+![image](https://user-images.githubusercontent.com/93314333/148906660-283d8519-69f1-4d0b-8a46-9d8eda9640b1.png)
+
+
+
+
+
 
 **********************************************************************************************************************************************************
 
