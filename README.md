@@ -1,4 +1,4 @@
-Hi, 
+Hi There, 
 
 Here is a brief on the Coding Quiz Challenge I have created:
 
