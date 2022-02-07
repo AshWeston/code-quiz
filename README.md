@@ -16,7 +16,7 @@ Once you have completed the Quiz, enter your initials to save your High Score. T
 ![image](https://user-images.githubusercontent.com/93314333/148906660-283d8519-69f1-4d0b-8a46-9d8eda9640b1.png)
 
 
-
+Uses: HTML, Javascript, CSS
 
 
 
